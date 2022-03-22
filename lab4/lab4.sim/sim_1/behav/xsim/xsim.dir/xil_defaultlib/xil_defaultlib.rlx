@@ -1,0 +1,9 @@
+0.7
+2020.1
+May 27 2020
+20:09:33
+C:/Users/bodmer.d/Downloads/eightbit_palu.v,1645560041,verilog,,C:/Users/bodmer.d/lab4/lab4.srcs/sources_1/new/mux21.v,,eightbit_palu,,,,,,,,
+C:/Users/bodmer.d/lab4/lab4.sim/sim_1/behav/xsim/glbl.v,1590624368,verilog,,,,glbl,,,,,,,,
+C:/Users/bodmer.d/lab4/lab4.srcs/sim_1/new/alu_regfile_tb.v,1645559966,verilog,,,,alu_regfile_tb,,,,,,,,
+,,,,C:/Users/bodmer.d/lab4/lab4.srcs/sources_1/new/reg_file.v,,mux21,,,,,,,,
+C:/Users/bodmer.d/lab4/lab4.srcs/sources_1/new/reg_file.v,1645557138,verilog,,C:/Users/bodmer.d/lab4/lab4.srcs/sim_1/new/alu_regfile_tb.v,,reg_file,,,,,,,,
