@@ -37,17 +37,16 @@ module inst_decoder(
     output reg MemToReg
     );
     
-    reg rs, rt, rd, padding;
-    
-
-    
+    reg padding;
+        
     always @(*) begin
     
         assign opcode = instruction[15:12];
-        assign rs = instruction[11:10];
-        assign rt = instruction[9:8];
-        assign rd = instruction[7:6];
-        assign padding = instruction[5:0];
+        assign rs_addr = instruction[11:10];
+        assign rt_addr = instruction[9:8];
+        assign rd_addr = instruction[7:6];
+        assign immediate = instruction[7:0];
+        //assign padding = instruction[5:0];
         
         case (opcode)
         // lw
@@ -65,7 +64,7 @@ module inst_decoder(
             RegDst = 1'b0;
             RegWrite = 1'b0;
             ALUSrc1 = 1'b0;
-            ALUSrc2 = 1'b1;
+            ALUSrc2 = 1'b0;
             ALUOp = 3'b000;
             MemWrite = 1'b1;
             MemToReg = 1'b0;
@@ -151,7 +150,7 @@ module inst_decoder(
             MemToReg = 1'b0;
         end
         // sll
-        4'b0101: begin
+        4'b1010: begin
             RegDst = 1'b0;
             RegWrite = 1'b1;
             ALUSrc1 = 1'b0;
@@ -181,7 +180,7 @@ module inst_decoder(
             MemToReg = 1'b0;
         end
         // clr
-        4'b0101: begin
+        4'b1101: begin
             RegDst = 1'b1;
             RegWrite = 1'b1;
             ALUSrc1 = 1'b1;
