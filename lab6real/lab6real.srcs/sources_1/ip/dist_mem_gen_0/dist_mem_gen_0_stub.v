@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
 // Date        : Tue Mar 22 13:30:30 2022
 // Host        : WFXA4BB6DB89955 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               c:/Users/bodmer.d/labs/lab6real/lab6real.srcs/sources_1/ip/dist_mem_gen_0/dist_mem_gen_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top dist_mem_gen_0 -prefix
+//               dist_mem_gen_0_ dist_mem_gen_0_stub.v
 // Design      : dist_mem_gen_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7vx485tffg1157-1

@@ -97,18 +97,7 @@ module pdatapath_top(
   .probe_in7(opcode),      // input wire [3 : 0] probe_in7
   .probe_in8(alu_output),      // input wire [7 : 0] probe_in8
   .probe_in9(Data_Mem_Out),      // input wire [8 : 0] probe_in9
-  .probe_out0(RegWrite),    // output wire [0 : 0] probe_out0
-  .probe_out1(RegDst),    // output wire [0 : 0] probe_out1
-  .probe_out2(immediate),    // output wire [7 : 0] probe_out2
-  .probe_out3(ALUSrc1),    // output wire [0 : 0] probe_out3
-  .probe_out4(ALUSrc2),    // output wire [0 : 0] probe_out4
-  .probe_out5(ALUOp),    // output wire [2 : 0] probe_out5
-  .probe_out6(MemWrite),    // output wire [0 : 0] probe_out6
-  .probe_out7(opcode),    // output wire [3 : 0] probe_out7
-  .probe_out8(MemToReg),    // output wire [0 : 0] probe_out8
-  .probe_out9(rs_addr),    // output wire [1 : 0] probe_out9
-  .probe_out10(rt_addr),  // output wire [1 : 0] probe_out10
-  .probe_out11(rd_addr)  // output wire [1 : 0] probe_out11
+  .probe_out0(instruction)    // output wire [0 : 0] probe_out0
 );
     
 

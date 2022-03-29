@@ -36,11 +36,11 @@ module pdatapath_tb;
     end
     
     initial begin
-        $monitor("%d instruction=%b opcode=%b RegDst=%b RegWrite=%b ALUSrc1=%b ALUSrc2=%b ALUOp=%b MemWrite=%b MemToReg=%b", 
-        $time, instruction, opcode, RegDst, RegWrite, ALUSrc1, ALUSrc2, ALUOp, MemWrite, MemToReg);
+        $monitor("%d instruction=%b opcode=%b rs_addr=%b rt_addr=%b rd_addr=%b RegDst=%b RegWrite=%b ALUSrc1=%b ALUSrc2=%b ALUOp=%b MemWrite=%b MemToReg=%b", 
+        $time, instruction, opcode,  rs_addr, rt_addr, rd_addr, RegDst, RegWrite, ALUSrc1, ALUSrc2, ALUOp, MemWrite, MemToReg);
         #10 instruction = {4'b0000, {12{1'b0}}};
-        #10 instruction = {4'b0001, {12{1'b0}}};
-        #10 instruction = {4'b0010, {12{1'b0}}};
+        #10 instruction = {16'b0100000101000000}; // 4140
+        #10 instruction = {16'b1010010100000011}; // A503
         #10 instruction = {4'b0011, {12{1'b0}}};
         #10 instruction = {4'b0100, {12{1'b0}}};
         #10 instruction = {4'b0101, {12{1'b0}}};

@@ -21,7 +21,7 @@
 
 
 module inst_decoder_tb;
-     [15:0] instruction,
+    wire [15:0] instruction,
     output reg [3:0] opcode,
     output reg [1:0] rs_addr,
     output reg [1:0] rt_addr,
