@@ -66,26 +66,8 @@ module pdatapath_top(
     assign led = alu_output;
 	assign ovf_ctrl = alu_ovf;
 
-	
-	// Push button debounce
-    debounce debounce_clk(
-        .clk_in(clk),
-        .rst_in(rst_general),
-        .sig_in(top_pb_clk),
-        .sig_debounced_out(pb_clk_debounced)
-    );
-	
-	// 7-Segment display module
-	Adaptor_display display(
-		.clk(clk), 					// system clock
-		.input_value(alu_output),	// 8-bit input [7:0] value to display
-		.disp_en(disp_en),			// output [3:0] 7 segment display enable
-		.seg7_output(seg7_output)	// output [6:0] 7 segment signals
-	);
-    
-    
     //Instantiate Your instruction decoder here
-
+    
         
 	//Instantiate Your alu-regfile here
     reg_file REG(rst_general, pb_clk_debounced, rs_addr, rt_addr, regfile_WriteAddress, regfile_WriteData, RegWrite, regfile_ReadData1, regfile_ReadData2);
