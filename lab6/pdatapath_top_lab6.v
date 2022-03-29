@@ -61,7 +61,7 @@ module pdatapath_top(
     wire pb_clk_debounced;
 
 	assign alu_result = {alu_ovf, alu_output};
-	
+		
 	// Assign LEDs
     assign led = alu_output;
 	assign ovf_ctrl = alu_ovf;
@@ -74,6 +74,42 @@ module pdatapath_top(
     assign alu_input1 = ALUSrc1 ? 0 : regfile_ReadData1[7:0];
     assign alu_input2 = ALUSrc2 ? immediate : regfile_ReadData2[7:0];
     alu ALU(alu_input1, alu_input2, ALUOp, alu_output, alu_ovf, take_branch);
+    
+    // DATA MEM
+    dist_mem_gen_0 data_mem (
+    .a(alu_output),      // input wire [7 : 0] a
+    .d(regfile_ReadData2),      // input wire [8 : 0] d
+    .clk(clk),  // input wire clk
+    .we(MemWrite),    // input wire we
+    .spo(Data_Mem_Out)  // output wire [8 : 0] spo
+    );
+    
+    // VIO
+    vio_0 VIO (
+  .clk(clk),                  // input wire clk
+  .probe_in0(regfile_WriteData),      // input wire [8 : 0] probe_in0
+  .probe_in1(regfile_ReadData1),      // input wire [7 : 0] probe_in1
+  .probe_in2(regfile_ReadData2),      // input wire [7 : 0] probe_in2
+  .probe_in3(alu_input1),      // input wire [7 : 0] probe_in3
+  .probe_in4(alu_input2),      // input wire [7 : 0] probe_in4
+  .probe_in5(take_branch),      // input wire [0 : 0] probe_in5
+  .probe_in6(alu_ovf),      // input wire [0 : 0] probe_in6
+  .probe_in7(opcode),      // input wire [3 : 0] probe_in7
+  .probe_in8(alu_output),      // input wire [7 : 0] probe_in8
+  .probe_in9(Data_Mem_Out),      // input wire [8 : 0] probe_in9
+  .probe_out0(RegWrite),    // output wire [0 : 0] probe_out0
+  .probe_out1(RegDst),    // output wire [0 : 0] probe_out1
+  .probe_out2(immediate),    // output wire [7 : 0] probe_out2
+  .probe_out3(ALUSrc1),    // output wire [0 : 0] probe_out3
+  .probe_out4(ALUSrc2),    // output wire [0 : 0] probe_out4
+  .probe_out5(ALUOp),    // output wire [2 : 0] probe_out5
+  .probe_out6(MemWrite),    // output wire [0 : 0] probe_out6
+  .probe_out7(opcode),    // output wire [3 : 0] probe_out7
+  .probe_out8(MemToReg),    // output wire [0 : 0] probe_out8
+  .probe_out9(rs_addr),    // output wire [1 : 0] probe_out9
+  .probe_out10(rt_addr),  // output wire [1 : 0] probe_out10
+  .probe_out11(rd_addr)  // output wire [1 : 0] probe_out11
+);
     
 
 endmodule

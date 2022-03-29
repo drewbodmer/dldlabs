@@ -41,11 +41,11 @@ module inst_decoder(
         
     always @(*) begin
     
-        assign opcode = instruction[15:12];
-        assign rs_addr = instruction[11:10];
-        assign rt_addr = instruction[9:8];
-        assign rd_addr = instruction[7:6];
-        assign immediate = instruction[7:0];
+        opcode = instruction[15:12];
+        rs_addr = instruction[11:10];
+        rt_addr = instruction[9:8];
+        rd_addr = instruction[7:6];
+        immediate = instruction[7:0];
         //assign padding = instruction[5:0];
         
         case (opcode)
