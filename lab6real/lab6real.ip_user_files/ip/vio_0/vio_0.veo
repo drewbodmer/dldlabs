@@ -55,26 +55,29 @@
 
 //----------- Begin Cut here for INSTANTIATION Template ---// INST_TAG
 vio_0 your_instance_name (
-  .clk(clk),                // input wire clk
-  .probe_in0(probe_in0),    // input wire [8 : 0] probe_in0
-  .probe_in1(probe_in1),    // input wire [7 : 0] probe_in1
-  .probe_in2(probe_in2),    // input wire [7 : 0] probe_in2
-  .probe_in3(probe_in3),    // input wire [7 : 0] probe_in3
-  .probe_in4(probe_in4),    // input wire [7 : 0] probe_in4
-  .probe_in5(probe_in5),    // input wire [0 : 0] probe_in5
-  .probe_in6(probe_in6),    // input wire [0 : 0] probe_in6
-  .probe_in7(probe_in7),    // input wire [7 : 0] probe_in7
-  .probe_in8(probe_in8),    // input wire [8 : 0] probe_in8
-  .probe_out0(probe_out0),  // output wire [0 : 0] probe_out0
-  .probe_out1(probe_out1),  // output wire [7 : 0] probe_out1
-  .probe_out2(probe_out2),  // output wire [0 : 0] probe_out2
-  .probe_out3(probe_out3),  // output wire [0 : 0] probe_out3
-  .probe_out4(probe_out4),  // output wire [2 : 0] probe_out4
-  .probe_out5(probe_out5),  // output wire [0 : 0] probe_out5
-  .probe_out6(probe_out6),  // output wire [0 : 0] probe_out6
-  .probe_out7(probe_out7),  // output wire [1 : 0] probe_out7
-  .probe_out8(probe_out8),  // output wire [1 : 0] probe_out8
-  .probe_out9(probe_out9)  // output wire [1 : 0] probe_out9
+  .clk(clk),                  // input wire clk
+  .probe_in0(probe_in0),      // input wire [8 : 0] probe_in0
+  .probe_in1(probe_in1),      // input wire [7 : 0] probe_in1
+  .probe_in2(probe_in2),      // input wire [7 : 0] probe_in2
+  .probe_in3(probe_in3),      // input wire [7 : 0] probe_in3
+  .probe_in4(probe_in4),      // input wire [7 : 0] probe_in4
+  .probe_in5(probe_in5),      // input wire [0 : 0] probe_in5
+  .probe_in6(probe_in6),      // input wire [0 : 0] probe_in6
+  .probe_in7(probe_in7),      // input wire [3 : 0] probe_in7
+  .probe_in8(probe_in8),      // input wire [7 : 0] probe_in8
+  .probe_in9(probe_in9),      // input wire [8 : 0] probe_in9
+  .probe_out0(probe_out0),    // output wire [0 : 0] probe_out0
+  .probe_out1(probe_out1),    // output wire [0 : 0] probe_out1
+  .probe_out2(probe_out2),    // output wire [7 : 0] probe_out2
+  .probe_out3(probe_out3),    // output wire [0 : 0] probe_out3
+  .probe_out4(probe_out4),    // output wire [0 : 0] probe_out4
+  .probe_out5(probe_out5),    // output wire [2 : 0] probe_out5
+  .probe_out6(probe_out6),    // output wire [0 : 0] probe_out6
+  .probe_out7(probe_out7),    // output wire [3 : 0] probe_out7
+  .probe_out8(probe_out8),    // output wire [0 : 0] probe_out8
+  .probe_out9(probe_out9),    // output wire [1 : 0] probe_out9
+  .probe_out10(probe_out10),  // output wire [1 : 0] probe_out10
+  .probe_out11(probe_out11)  // output wire [1 : 0] probe_out11
 );
 // INST_TAG_END ------ End INSTANTIATION Template ---------
 

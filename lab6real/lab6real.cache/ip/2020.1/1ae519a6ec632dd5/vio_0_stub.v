@@ -1,10 +1,10 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-// Date        : Tue Mar 22 13:28:32 2022
+// Date        : Tue Mar 29 13:57:48 2022
 // Host        : WFXA4BB6DB89955 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               c:/Users/bodmer.d/labs/lab6real/lab6real.srcs/sources_1/ip/vio_0/vio_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
+//               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ vio_0_stub.v
 // Design      : vio_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7vx485tffg1157-1
@@ -14,10 +14,11 @@
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
 (* X_CORE_INFO = "vio,Vivado 2020.1" *)
-module vio_0(clk, probe_in0, probe_in1, probe_in2, probe_in3, 
-  probe_in4, probe_in5, probe_in6, probe_in7, probe_in8, probe_out0, probe_out1, probe_out2, 
-  probe_out3, probe_out4, probe_out5, probe_out6, probe_out7, probe_out8, probe_out9)
-/* synthesis syn_black_box black_box_pad_pin="clk,probe_in0[8:0],probe_in1[7:0],probe_in2[7:0],probe_in3[7:0],probe_in4[7:0],probe_in5[0:0],probe_in6[0:0],probe_in7[7:0],probe_in8[8:0],probe_out0[0:0],probe_out1[7:0],probe_out2[0:0],probe_out3[0:0],probe_out4[2:0],probe_out5[0:0],probe_out6[0:0],probe_out7[1:0],probe_out8[1:0],probe_out9[1:0]" */;
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix(clk, probe_in0, probe_in1, probe_in2, probe_in3, 
+  probe_in4, probe_in5, probe_in6, probe_in7, probe_in8, probe_in9, probe_in10, probe_out0, 
+  probe_out1, probe_out2, probe_out3, probe_out4, probe_out5, probe_out6, probe_out7, probe_out8, 
+  probe_out9, probe_out10, probe_out11)
+/* synthesis syn_black_box black_box_pad_pin="clk,probe_in0[8:0],probe_in1[7:0],probe_in2[7:0],probe_in3[7:0],probe_in4[7:0],probe_in5[0:0],probe_in6[0:0],probe_in7[7:0],probe_in8[8:0],probe_in9[0:0],probe_in10[0:0],probe_out0[0:0],probe_out1[7:0],probe_out2[0:0],probe_out3[0:0],probe_out4[2:0],probe_out5[0:0],probe_out6[0:0],probe_out7[1:0],probe_out8[1:0],probe_out9[1:0],probe_out10[0:0],probe_out11[0:0]" */;
   input clk;
   input [8:0]probe_in0;
   input [7:0]probe_in1;
@@ -28,6 +29,8 @@ module vio_0(clk, probe_in0, probe_in1, probe_in2, probe_in3,
   input [0:0]probe_in6;
   input [7:0]probe_in7;
   input [8:0]probe_in8;
+  input [0:0]probe_in9;
+  input [0:0]probe_in10;
   output [0:0]probe_out0;
   output [7:0]probe_out1;
   output [0:0]probe_out2;
@@ -38,4 +41,6 @@ module vio_0(clk, probe_in0, probe_in1, probe_in2, probe_in3,
   output [1:0]probe_out7;
   output [1:0]probe_out8;
   output [1:0]probe_out9;
+  output [0:0]probe_out10;
+  output [0:0]probe_out11;
 endmodule

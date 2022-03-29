@@ -67,7 +67,7 @@ module pdatapath_top(
 	assign ovf_ctrl = alu_ovf;
 
     //Instantiate Your instruction decoder here
-    
+    inst_decoder decoder(instruction, opcode, rs_addr, rt_addr, rd_addr, immediate, RegDst, RegWrite, ALUSrc1, ALUSrc2, ALUOp, MemWrite, MemToReg);
         
 	//Instantiate Your alu-regfile here
     reg_file REG(rst_general, pb_clk_debounced, rs_addr, rt_addr, regfile_WriteAddress, regfile_WriteData, RegWrite, regfile_ReadData1, regfile_ReadData2);
