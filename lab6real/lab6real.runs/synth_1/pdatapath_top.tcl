@@ -87,7 +87,6 @@ set_property ip_output_repo c:/Users/bodmer.d/labs/lab6real/lab6real.cache/ip [c
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-add_files c:/Users/bodmer.d/Documents/mycode.coe
 read_verilog -library xil_defaultlib {
   C:/Users/bodmer.d/Downloads/adaptor_display.v
   C:/Users/bodmer.d/Downloads/debounce.v
@@ -96,15 +95,15 @@ read_verilog -library xil_defaultlib {
   C:/Users/bodmer.d/labs/lab6real/lab6real.srcs/sources_1/new/pcreg.v
   C:/Users/bodmer.d/Downloads/pdatapath_top_lab7.v
 }
+read_ip -quiet C:/Users/bodmer.d/labs/lab6real/lab6real.srcs/sources_1/ip/vio_0_1/vio_0.xci
+set_property used_in_implementation false [get_files -all c:/Users/bodmer.d/labs/lab6real/lab6real.srcs/sources_1/ip/vio_0_1/vio_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/bodmer.d/labs/lab6real/lab6real.srcs/sources_1/ip/vio_0_1/vio_0_ooc.xdc]
+
 read_ip -quiet C:/Users/bodmer.d/labs/lab6real/lab6real.srcs/sources_1/ip/dist_mem_gen_0/dist_mem_gen_0.xci
 set_property used_in_implementation false [get_files -all c:/Users/bodmer.d/labs/lab6real/lab6real.srcs/sources_1/ip/dist_mem_gen_0/dist_mem_gen_0_ooc.xdc]
 
-read_ip -quiet c:/Users/bodmer.d/labs/lab6real/lab6real.srcs/sources_1/ip/instr_mem/instr_mem.xci
+read_ip -quiet C:/Users/bodmer.d/labs/lab6real/lab6real.srcs/sources_1/ip/instr_mem/instr_mem.xci
 set_property used_in_implementation false [get_files -all c:/Users/bodmer.d/labs/lab6real/lab6real.srcs/sources_1/ip/instr_mem/instr_mem_ooc.xdc]
-
-read_ip -quiet c:/Users/bodmer.d/labs/lab6real/lab6real.srcs/sources_1/ip/vio_0_1/vio_0.xci
-set_property used_in_implementation false [get_files -all c:/Users/bodmer.d/labs/lab6real/lab6real.srcs/sources_1/ip/vio_0_1/vio_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/bodmer.d/labs/lab6real/lab6real.srcs/sources_1/ip/vio_0_1/vio_0_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -117,6 +116,9 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 }
 read_xdc C:/Users/bodmer.d/Downloads/pdatapath_lab6.xdc
 set_property used_in_implementation false [get_files C:/Users/bodmer.d/Downloads/pdatapath_lab6.xdc]
+
+read_xdc C:/Users/bodmer.d/Downloads/pdatapath_lab8.xdc
+set_property used_in_implementation false [get_files C:/Users/bodmer.d/Downloads/pdatapath_lab8.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]

@@ -1,14 +1,14 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-// Date        : Tue Mar 22 13:30:30 2022
+// Date        : Tue Apr 12 15:03:57 2022
 // Host        : WFXA4BB6DB89955 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim -rename_top dist_mem_gen_0 -prefix
-//               dist_mem_gen_0_ dist_mem_gen_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim
+//               c:/Users/bodmer.d/labs/lab6real/lab6real.srcs/sources_1/ip/dist_mem_gen_0/dist_mem_gen_0_sim_netlist.v
 // Design      : dist_mem_gen_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
-// Device      : xc7vx485tffg1157-1
+// Device      : xc7z020clg400-1
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
@@ -35,7 +35,7 @@ module dist_mem_gen_0
   wire [8:0]NLW_U0_qdpo_UNCONNECTED;
   wire [8:0]NLW_U0_qspo_UNCONNECTED;
 
-  (* C_FAMILY = "virtex7" *) 
+  (* C_FAMILY = "zynq" *) 
   (* C_HAS_CLK = "1" *) 
   (* C_HAS_D = "1" *) 
   (* C_HAS_DPO = "0" *) 
@@ -89,7 +89,7 @@ module dist_mem_gen_0
 endmodule
 
 (* C_ADDR_WIDTH = "8" *) (* C_DEFAULT_DATA = "0" *) (* C_DEPTH = "256" *) 
-(* C_ELABORATION_DIR = "./" *) (* C_FAMILY = "virtex7" *) (* C_HAS_CLK = "1" *) 
+(* C_ELABORATION_DIR = "./" *) (* C_FAMILY = "zynq" *) (* C_HAS_CLK = "1" *) 
 (* C_HAS_D = "1" *) (* C_HAS_DPO = "0" *) (* C_HAS_DPRA = "0" *) 
 (* C_HAS_I_CE = "0" *) (* C_HAS_QDPO = "0" *) (* C_HAS_QDPO_CE = "0" *) 
 (* C_HAS_QDPO_CLK = "0" *) (* C_HAS_QDPO_RST = "0" *) (* C_HAS_QDPO_SRST = "0" *) 
@@ -98,7 +98,7 @@ endmodule
 (* C_MEM_INIT_FILE = "no_coe_file_loaded" *) (* C_MEM_TYPE = "1" *) (* C_PARSER_TYPE = "1" *) 
 (* C_PIPELINE_STAGES = "0" *) (* C_QCE_JOINED = "0" *) (* C_QUALIFY_WE = "0" *) 
 (* C_READ_MIF = "0" *) (* C_REG_A_D_INPUTS = "0" *) (* C_REG_DPRA_INPUT = "0" *) 
-(* C_SYNC_ENABLE = "1" *) (* C_WIDTH = "9" *) 
+(* C_SYNC_ENABLE = "1" *) (* C_WIDTH = "9" *) (* ORIG_REF_NAME = "dist_mem_gen_v8_0_13" *) 
 module dist_mem_gen_0_dist_mem_gen_v8_0_13
    (a,
     d,
@@ -179,6 +179,7 @@ module dist_mem_gen_0_dist_mem_gen_v8_0_13
         .we(we));
 endmodule
 
+(* ORIG_REF_NAME = "dist_mem_gen_v8_0_13_synth" *) 
 module dist_mem_gen_0_dist_mem_gen_v8_0_13_synth
    (spo,
     clk,
@@ -205,6 +206,7 @@ module dist_mem_gen_0_dist_mem_gen_v8_0_13_synth
         .we(we));
 endmodule
 
+(* ORIG_REF_NAME = "spram" *) 
 module dist_mem_gen_0_spram
    (spo,
     clk,

@@ -14,17 +14,29 @@
     </Object>
   </ObjectList>
   <ObjectList object_type="hw_probe" gui_info="">
-    <Object name="Data_Mem_Out[8:0]" gui_info="hw_vios/hw_vio_1=10"/>
-    <Object name="alu_input1[7:0]" gui_info="hw_vios/hw_vio_1=0"/>
-    <Object name="alu_input2[7:0]" gui_info="hw_vios/hw_vio_1=1"/>
-    <Object name="alu_output[7:0]" gui_info="hw_vios/hw_vio_1=6"/>
+    <Object name="ALUOp[2:0]" gui_info="hw_vios/hw_vio_1=18"/>
+    <Object name="ALUSrc1" gui_info="hw_vios/hw_vio_1=19"/>
+    <Object name="ALUSrc2" gui_info="hw_vios/hw_vio_1=7"/>
+    <Object name="Data_Mem_Out[8:0]" gui_info="hw_vios/hw_vio_1=8"/>
+    <Object name="MemToReg" gui_info="hw_vios/hw_vio_1=9"/>
+    <Object name="MemWrite" gui_info="hw_vios/hw_vio_1=20"/>
+    <Object name="RegDst" gui_info="hw_vios/hw_vio_1=21"/>
+    <Object name="RegWrite" gui_info="hw_vios/hw_vio_1=22"/>
+    <Object name="alu_input1[7:0]" gui_info="hw_vios/hw_vio_1=10"/>
+    <Object name="alu_input2[7:0]" gui_info="hw_vios/hw_vio_1=13"/>
+    <Object name="alu_output[7:0]" gui_info="hw_vios/hw_vio_1=1"/>
     <Object name="alu_ovf" gui_info="hw_vios/hw_vio_1=2"/>
-    <Object name="instruction[15:0]" gui_info="hw_vios/hw_vio_1=7"/>
-    <Object name="opcode[3:0]" gui_info="hw_vios/hw_vio_1=8"/>
-    <Object name="regfile_ReadData1[7:0]" gui_info="hw_vios/hw_vio_1=3"/>
-    <Object name="regfile_ReadData2[7:0]" gui_info="hw_vios/hw_vio_1=4"/>
-    <Object name="regfile_WriteData[8:0]" gui_info="hw_vios/hw_vio_1=9"/>
-    <Object name="take_branch" gui_info="hw_vios/hw_vio_1=5"/>
+    <Object name="immediate[7:0]" gui_info="hw_vios/hw_vio_1=14"/>
+    <Object name="instruction[15:0]" gui_info="hw_vios/hw_vio_1=3"/>
+    <Object name="opcode[3:0]" gui_info="hw_vios/hw_vio_1=15"/>
+    <Object name="pc[7:0]" gui_info="hw_vios/hw_vio_1=4"/>
+    <Object name="rd_addr[1:0]" gui_info="hw_vios/hw_vio_1=16"/>
+    <Object name="regfile_ReadData1[7:0]" gui_info="hw_vios/hw_vio_1=0"/>
+    <Object name="regfile_ReadData2[7:0]" gui_info="hw_vios/hw_vio_1=11"/>
+    <Object name="regfile_WriteData[8:0]" gui_info="hw_vios/hw_vio_1=12"/>
+    <Object name="rs_addr[1:0]" gui_info="hw_vios/hw_vio_1=5"/>
+    <Object name="rt_addr[1:0]" gui_info="hw_vios/hw_vio_1=17"/>
+    <Object name="take_branch" gui_info="hw_vios/hw_vio_1=6"/>
   </ObjectList>
   <ObjectList object_type="hw_vio" gui_info="">
     <Object name="hw_vio_1" gui_info="hw_vios/hw_vio_1/TablePreference=5	440	Name	0	2147483647	15	178	178	Value	1	2147483647	15	92	92	Activity	2	2147483647	15	44	44	Direction	3	2147483647	15	58	58	VIO	4	2147483647	15	68	68			1	6	1	Name	Value	Activity	Direction	VIO"/>

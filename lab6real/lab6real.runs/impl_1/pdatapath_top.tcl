@@ -136,11 +136,12 @@ OPTRACE "set parameters" START { }
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
   add_files -quiet C:/Users/bodmer.d/labs/lab6real/lab6real.runs/synth_1/pdatapath_top.dcp
+  read_ip -quiet C:/Users/bodmer.d/labs/lab6real/lab6real.srcs/sources_1/ip/vio_0_1/vio_0.xci
   read_ip -quiet C:/Users/bodmer.d/labs/lab6real/lab6real.srcs/sources_1/ip/dist_mem_gen_0/dist_mem_gen_0.xci
-  read_ip -quiet c:/Users/bodmer.d/labs/lab6real/lab6real.srcs/sources_1/ip/instr_mem/instr_mem.xci
-  read_ip -quiet c:/Users/bodmer.d/labs/lab6real/lab6real.srcs/sources_1/ip/vio_0_1/vio_0.xci
+  read_ip -quiet C:/Users/bodmer.d/labs/lab6real/lab6real.srcs/sources_1/ip/instr_mem/instr_mem.xci
 OPTRACE "read constraints: implementation" START { }
   read_xdc C:/Users/bodmer.d/Downloads/pdatapath_lab6.xdc
+  read_xdc C:/Users/bodmer.d/Downloads/pdatapath_lab8.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }

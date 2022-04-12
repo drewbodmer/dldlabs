@@ -89,7 +89,7 @@ set_property ip_output_repo c:/Users/bodmer.d/labs/lab6real/lab6real.cache/ip [c
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet c:/Users/bodmer.d/labs/lab6real/lab6real.srcs/sources_1/ip/instr_mem/instr_mem.xci
+read_ip -quiet C:/Users/bodmer.d/labs/lab6real/lab6real.srcs/sources_1/ip/instr_mem/instr_mem.xci
 set_property used_in_implementation false [get_files -all c:/Users/bodmer.d/labs/lab6real/lab6real.srcs/sources_1/ip/instr_mem/instr_mem_ooc.xdc]
 
 OPTRACE "Adding files" END { }

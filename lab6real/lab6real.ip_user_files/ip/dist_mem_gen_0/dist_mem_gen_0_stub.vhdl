@@ -1,13 +1,13 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
--- Date        : Tue Mar 22 13:30:30 2022
+-- Date        : Tue Apr 12 15:03:57 2022
 -- Host        : WFXA4BB6DB89955 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub -rename_top dist_mem_gen_0 -prefix
---               dist_mem_gen_0_ dist_mem_gen_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub
+--               c:/Users/bodmer.d/labs/lab6real/lab6real.srcs/sources_1/ip/dist_mem_gen_0/dist_mem_gen_0_stub.vhdl
 -- Design      : dist_mem_gen_0
 -- Purpose     : Stub declaration of top-level module interface
--- Device      : xc7vx485tffg1157-1
+-- Device      : xc7z020clg400-1
 -- --------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;

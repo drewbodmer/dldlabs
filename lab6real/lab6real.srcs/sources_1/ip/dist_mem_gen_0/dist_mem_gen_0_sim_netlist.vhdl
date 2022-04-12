@@ -1,14 +1,14 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
--- Date        : Tue Mar 22 13:30:30 2022
+-- Date        : Tue Apr 12 15:03:57 2022
 -- Host        : WFXA4BB6DB89955 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim -rename_top dist_mem_gen_0 -prefix
---               dist_mem_gen_0_ dist_mem_gen_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim
+--               c:/Users/bodmer.d/labs/lab6real/lab6real.srcs/sources_1/ip/dist_mem_gen_0/dist_mem_gen_0_sim_netlist.vhdl
 -- Design      : dist_mem_gen_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
--- Device      : xc7vx485tffg1157-1
+-- Device      : xc7z020clg400-1
 -- --------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -22,6 +22,8 @@ entity dist_mem_gen_0_spram is
     we : in STD_LOGIC;
     a : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of dist_mem_gen_0_spram : entity is "spram";
 end dist_mem_gen_0_spram;
 
 architecture STRUCTURE of dist_mem_gen_0_spram is
@@ -342,6 +344,8 @@ entity dist_mem_gen_0_dist_mem_gen_v8_0_13_synth is
     we : in STD_LOGIC;
     a : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of dist_mem_gen_0_dist_mem_gen_v8_0_13_synth : entity is "dist_mem_gen_v8_0_13_synth";
 end dist_mem_gen_0_dist_mem_gen_v8_0_13_synth;
 
 architecture STRUCTURE of dist_mem_gen_0_dist_mem_gen_v8_0_13_synth is
@@ -388,7 +392,7 @@ entity dist_mem_gen_0_dist_mem_gen_v8_0_13 is
   attribute C_ELABORATION_DIR : string;
   attribute C_ELABORATION_DIR of dist_mem_gen_0_dist_mem_gen_v8_0_13 : entity is "./";
   attribute C_FAMILY : string;
-  attribute C_FAMILY of dist_mem_gen_0_dist_mem_gen_v8_0_13 : entity is "virtex7";
+  attribute C_FAMILY of dist_mem_gen_0_dist_mem_gen_v8_0_13 : entity is "zynq";
   attribute C_HAS_CLK : integer;
   attribute C_HAS_CLK of dist_mem_gen_0_dist_mem_gen_v8_0_13 : entity is 1;
   attribute C_HAS_D : integer;
@@ -443,6 +447,8 @@ entity dist_mem_gen_0_dist_mem_gen_v8_0_13 is
   attribute C_SYNC_ENABLE of dist_mem_gen_0_dist_mem_gen_v8_0_13 : entity is 1;
   attribute C_WIDTH : integer;
   attribute C_WIDTH of dist_mem_gen_0_dist_mem_gen_v8_0_13 : entity is 9;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of dist_mem_gen_0_dist_mem_gen_v8_0_13 : entity is "dist_mem_gen_v8_0_13";
 end dist_mem_gen_0_dist_mem_gen_v8_0_13;
 
 architecture STRUCTURE of dist_mem_gen_0_dist_mem_gen_v8_0_13 is
@@ -515,7 +521,7 @@ architecture STRUCTURE of dist_mem_gen_0 is
   signal NLW_U0_qdpo_UNCONNECTED : STD_LOGIC_VECTOR ( 8 downto 0 );
   signal NLW_U0_qspo_UNCONNECTED : STD_LOGIC_VECTOR ( 8 downto 0 );
   attribute C_FAMILY : string;
-  attribute C_FAMILY of U0 : label is "virtex7";
+  attribute C_FAMILY of U0 : label is "zynq";
   attribute C_HAS_CLK : integer;
   attribute C_HAS_CLK of U0 : label is 1;
   attribute C_HAS_D : integer;
