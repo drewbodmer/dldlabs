@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../lab6real.srcs/sources_1/new/inst_decoder.v" \
+"../../../../lab6real.srcs/sim_1/new/pdatapath_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
