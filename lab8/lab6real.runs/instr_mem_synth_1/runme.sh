@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/bodmer.d/labs/lab6real/lab6real.runs/instr_mem_synth_1'
+HD_PWD='C:/Users/bodmer.d/labs/lab8/lab6real.runs/instr_mem_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

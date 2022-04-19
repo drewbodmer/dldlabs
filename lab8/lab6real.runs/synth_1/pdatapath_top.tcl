@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/bodmer.d/labs/lab6real/lab6real.runs/synth_1/pdatapath_top.tcl"
+  variable script "C:/Users/bodmer.d/labs/lab8/lab6real.runs/synth_1/pdatapath_top.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,8 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 4
-set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg400-1
 
@@ -79,32 +77,32 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir C:/Users/bodmer.d/labs/lab6real/lab6real.cache/wt [current_project]
-set_property parent.project_path C:/Users/bodmer.d/labs/lab6real/lab6real.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/bodmer.d/labs/lab8/lab6real.cache/wt [current_project]
+set_property parent.project_path C:/Users/bodmer.d/labs/lab8/lab6real.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo c:/Users/bodmer.d/labs/lab6real/lab6real.cache/ip [current_project]
+set_property ip_output_repo c:/Users/bodmer.d/labs/lab8/lab6real.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-add_files c:/Users/bodmer.d/Documents/mycode.coe
+add_files C:/Users/bodmer.d/Documents/mycode.coe
 read_verilog -library xil_defaultlib {
   C:/Users/bodmer.d/Downloads/adaptor_display.v
   C:/Users/bodmer.d/Downloads/debounce.v
-  C:/Users/bodmer.d/labs/lab6real/lab6real.srcs/sources_1/new/inst_decoder.v
+  C:/Users/bodmer.d/labs/lab8/lab6real.srcs/sources_1/new/inst_decoder.v
   C:/Users/bodmer.d/labs/lab6/main.v
-  C:/Users/bodmer.d/labs/lab6real/lab6real.srcs/sources_1/new/pcreg.v
+  C:/Users/bodmer.d/labs/lab8/lab6real.srcs/sources_1/new/pcreg.v
   C:/Users/bodmer.d/Downloads/pdatapath_top_lab7.v
 }
-read_ip -quiet C:/Users/bodmer.d/labs/lab6real/lab6real.srcs/sources_1/ip/dist_mem_gen_0/dist_mem_gen_0.xci
-set_property used_in_implementation false [get_files -all c:/Users/bodmer.d/labs/lab6real/lab6real.srcs/sources_1/ip/dist_mem_gen_0/dist_mem_gen_0_ooc.xdc]
+read_ip -quiet C:/Users/bodmer.d/labs/lab8/lab6real.srcs/sources_1/ip/dist_mem_gen_0/dist_mem_gen_0.xci
+set_property used_in_implementation false [get_files -all c:/Users/bodmer.d/labs/lab8/lab6real.srcs/sources_1/ip/dist_mem_gen_0/dist_mem_gen_0_ooc.xdc]
 
-read_ip -quiet c:/Users/bodmer.d/labs/lab6real/lab6real.srcs/sources_1/ip/instr_mem/instr_mem.xci
-set_property used_in_implementation false [get_files -all c:/Users/bodmer.d/labs/lab6real/lab6real.srcs/sources_1/ip/instr_mem/instr_mem_ooc.xdc]
+read_ip -quiet C:/Users/bodmer.d/labs/lab8/lab6real.srcs/sources_1/ip/instr_mem/instr_mem.xci
+set_property used_in_implementation false [get_files -all c:/Users/bodmer.d/labs/lab8/lab6real.srcs/sources_1/ip/instr_mem/instr_mem_ooc.xdc]
 
-read_ip -quiet c:/Users/bodmer.d/labs/lab6real/lab6real.srcs/sources_1/ip/vio_0_1/vio_0.xci
-set_property used_in_implementation false [get_files -all c:/Users/bodmer.d/labs/lab6real/lab6real.srcs/sources_1/ip/vio_0_1/vio_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/bodmer.d/labs/lab6real/lab6real.srcs/sources_1/ip/vio_0_1/vio_0_ooc.xdc]
+read_ip -quiet C:/Users/bodmer.d/labs/lab8/lab6real.srcs/sources_1/ip/vio_0_1/vio_0.xci
+set_property used_in_implementation false [get_files -all c:/Users/bodmer.d/labs/lab8/lab6real.srcs/sources_1/ip/vio_0_1/vio_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/bodmer.d/labs/lab8/lab6real.srcs/sources_1/ip/vio_0_1/vio_0_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

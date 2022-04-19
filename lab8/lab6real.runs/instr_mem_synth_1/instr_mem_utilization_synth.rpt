@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Tue Apr  5 13:52:14 2022
+| Date         : Tue Apr 19 13:09:56 2022
 | Host         : WFXA4BB6DB89955 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file instr_mem_utilization_synth.rpt -pb instr_mem_utilization_synth.pb
 | Design       : instr_mem
@@ -30,8 +30,8 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |    9 |     0 |     53200 |  0.02 |
-|   LUT as Logic          |    9 |     0 |     53200 |  0.02 |
+| Slice LUTs*             |    7 |     0 |     53200 |  0.01 |
+|   LUT as Logic          |    7 |     0 |     53200 |  0.01 |
 |   LUT as Memory         |    0 |     0 |     17400 |  0.00 |
 | Slice Registers         |    0 |     0 |    106400 |  0.00 |
 |   Register as Flip Flop |    0 |     0 |    106400 |  0.00 |
@@ -146,10 +146,8 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT5     |    8 |                 LUT |
-| LUT4     |    6 |                 LUT |
-| LUT6     |    1 |                 LUT |
-| LUT3     |    1 |                 LUT |
+| LUT5     |    7 |                 LUT |
+| LUT4     |    7 |                 LUT |
 +----------+------+---------------------+
 
 
